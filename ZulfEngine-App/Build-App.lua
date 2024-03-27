@@ -1,23 +1,33 @@
-project "App"
+project "ZulfEngine-App"
    kind "ConsoleApp"
    language "C++"
    cppdialect "C++20"
    targetdir "Binaries/%{cfg.buildcfg}"
    staticruntime "off"
 
-   files { "Source/**.h", "Source/**.cpp" }
+   files { "src/**.h", "src/**.cpp" }
 
    includedirs
    {
-      "Source",
+      "src",
 
 	  -- Include Core
-	  "../Core/Source"
+	  "../ZulfEngine-Core/src",
+      -- Include Graphics
+	  "../ZulfEngine-Graphics/src",
+      -- Include Input
+	  --"../ZulfEngine-Input/src",
+      -- Include Networking
+	  --"../ZulfEngine-Networking/src"
+      
    }
 
    links
    {
-      "Core"
+      "ZulfEngine-Core",
+      "ZulfEngine-Graphics",
+      --"ZulfEngine-Input",
+      --"ZulfEngine-Networking"
    }
 
    targetdir ("../Binaries/" .. OutputDir .. "/%{prj.name}")
