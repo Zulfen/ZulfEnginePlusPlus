@@ -10,8 +10,13 @@ workspace "New Project"
 
 OutputDir = "%{cfg.system}-%{cfg.architecture}/%{cfg.buildcfg}"
 
-group "Core"
-	include "Core/Build-Core.lua"
-group ""
+group "ZulfEngine-Core"
+	include "ZulfEngine-Core/Build-Core.lua"
+group "ZulfEngine-Graphics"
+	include "ZulfEngine-Graphics/Build-Graphics.lua"
+group "ZulfEngine-Input"
+	include "ZulfEngine-Input/Build-Input.lua"
+group "ZulfEngine-Graphics"
+	include "ZulfEngine-Core/Build-Graphics.lua"
 
-include "App/Build-App.lua"
+include "ZulfEngine-App/Build-App.lua"

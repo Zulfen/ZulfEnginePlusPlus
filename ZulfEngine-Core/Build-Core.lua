@@ -1,4 +1,4 @@
-project "Core"
+project "ZulfEngine-Core"
    kind "StaticLib"
    language "C++"
    cppdialect "C++20"
