@@ -10,6 +10,7 @@ CMakeFiles/
 *.log
 Makefile
 *.cmake
+CMakeCache.txt
 
 # Exclude
 !Vendor/Binaries
