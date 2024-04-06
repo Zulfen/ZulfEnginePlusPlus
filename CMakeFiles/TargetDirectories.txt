@@ -1,3 +1,0 @@
-C:/Users/Joshua Passmore/Documents/Projects/Games Stuff/ZulfEnginePlusPlus/CMakeFiles/ZulfEngine.dir
-C:/Users/Joshua Passmore/Documents/Projects/Games Stuff/ZulfEnginePlusPlus/CMakeFiles/ALL_BUILD.dir
-C:/Users/Joshua Passmore/Documents/Projects/Games Stuff/ZulfEnginePlusPlus/CMakeFiles/ZERO_CHECK.dir
