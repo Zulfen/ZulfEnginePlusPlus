@@ -1,5 +1,6 @@
 # Directories
 .vs/
+CMakeFiles/
 
 # Files
 *.vcxproj
@@ -8,6 +9,7 @@
 *.sln
 *.log
 Makefile
+*.cmake
 
 # Exclude
 !Vendor/Binaries
