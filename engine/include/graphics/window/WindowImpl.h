@@ -3,21 +3,15 @@
 class WindowImpl {
 
 public:
-
-	struct WindowRef {
-		int height;
-		int width;
-	};
+	virtual ~WindowImpl(); // Pure virtual destructor
 
 	WindowImpl(int width, int height, const char* title);
-	virtual ~WindowImpl();
 
-	virtual WindowRef CreateWindow() = 0;
-	virtual void DestroyWindow() = 0;
+	virtual void Show() = 0;
+	virtual void Destroy() = 0;
 
 protected:
 	int width;
 	int height;
 	const char* title;
 };
-

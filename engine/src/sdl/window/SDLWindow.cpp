@@ -3,25 +3,17 @@
 #include "graphics/window/WindowImpl.h"
 
 
-// Constructor definition
 SDLWindow::SDLWindow(int width, int height, const char *title): WindowImpl(width, height, title) {
+    window = SDL_CreateWindow(title, 100, 100, width, height, SDL_WINDOW_OPENGL);
 }
 
-// Define other methods here
-WindowImpl::WindowRef SDLWindow::CreateWindow() {
-    // SDL-specific window creation logic
-    window = SDL_CreateWindow(title, 0, 0, width, height, SDL_WINDOW_OPENGL);
-    const WindowRef windowRef {
-        width,
-        height
-    };
-    return windowRef;
-}
-
-void SDLWindow::DestroyWindow() {
+void SDLWindow::Destroy() {
     if (window) {
         SDL_DestroyWindow(window);
-        window = nullptr; // Reset pointer to avoid dangling references
     }
+}
+
+void SDLWindow::Show() {
+    SDL_ShowWindow(window);
 }
 

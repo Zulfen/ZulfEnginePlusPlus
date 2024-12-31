@@ -4,13 +4,14 @@
 #include "Graphics/window/WindowImpl.h"
 
 class SDLWindow : public WindowImpl {
-public:
-	SDLWindow(int width, int height, const char *title); // Declaration
+public:// Declaration
 
-	WindowRef CreateWindow() override;
-	void DestroyWindow() override;
+	SDLWindow(int width, int height, const char *title);
+
+	void Destroy() override;
+	void Show() override;
 
 protected:
 	// raw pointer. do I need unique_ptr for this?
-	SDL_Window* window{};
+	SDL_Window* window;
 };
