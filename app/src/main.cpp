@@ -1,9 +1,10 @@
 #include <ZulfEngine.h>
 
 int main() {
-    auto zulfApp = ZulfEngine::ZulfApp::createApplication(800, 600, "testing!!");
+    auto zulfApp = ZulfEngine::ZulfApp::createApplication();
+    zulfApp->CreateWindow(800, 600, "ZulfEngine");
     zulfApp->GetWindow()->Show();
-    zulfApp->Run();
+    zulfApp->Update();
 }
 
 

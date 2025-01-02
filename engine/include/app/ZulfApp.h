@@ -9,21 +9,18 @@ namespace ZulfEngine {
 
         virtual ~ZulfApp() = default;
 
-        virtual void Run() = 0;
+        virtual void Update() = 0;
 
         virtual WindowImpl* GetWindow() {
-            if (!window) {
-                window = GetWindowImpl();
-            }
-            return window.get();
+            return window ? window.get() : nullptr;
         }
 
-        ZulfApp();
+        void CreateWindow(int width, int height, const char* title);
 
-        static std::unique_ptr<ZulfApp> createApplication(int width, int height, const char* title);
+        static std::unique_ptr<ZulfApp> createApplication();
 
     protected:
-        virtual std::unique_ptr<WindowImpl> GetWindowImpl() = 0;
+        virtual std::unique_ptr<WindowImpl> CreateWindowImpl(int width, int height, const char* title) = 0;
         std::unique_ptr<WindowImpl> window;
     };
 

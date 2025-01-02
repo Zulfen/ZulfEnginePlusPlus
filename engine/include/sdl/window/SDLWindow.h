@@ -13,5 +13,5 @@ public:// Declaration
 
 protected:
 	// raw pointer. do I need unique_ptr for this?
-	SDL_Window* window;
+	SDL_Window* sdlWindowHandle;
 };

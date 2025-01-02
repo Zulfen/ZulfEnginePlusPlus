@@ -2,11 +2,14 @@
 
 #include "sdl/app/SDLZulfApp.h"
 
-ZulfEngine::ZulfApp::ZulfApp() = default;
+void ZulfEngine::ZulfApp::CreateWindow(int width, int height, const char *title) {
+    window = CreateWindowImpl(width, height, title);
+}
 
-std::unique_ptr<ZulfEngine::ZulfApp> ZulfEngine::ZulfApp::createApplication(int width, int height, const char* title) {
+
+std::unique_ptr<ZulfEngine::ZulfApp> ZulfEngine::ZulfApp::createApplication() {
     // Only SDL exists for now
-    return std::make_unique<SDLZulfApp>(width, height, title);
+    return std::make_unique<SDLZulfApp>();
 }
 
 

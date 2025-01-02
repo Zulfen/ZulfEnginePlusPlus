@@ -1,19 +1,22 @@
 #include "sdl/window/SDLWindow.h"
+
+#include <iostream>
 #include <SDL.h>
 #include "graphics/window/WindowImpl.h"
 
 
 SDLWindow::SDLWindow(int width, int height, const char *title): WindowImpl(width, height, title) {
-    window = SDL_CreateWindow(title, 100, 100, width, height, SDL_WINDOW_OPENGL);
+    sdlWindowHandle = SDL_CreateWindow(title, 100, 100, width, height, SDL_WINDOW_OPENGL);
 }
 
 void SDLWindow::Destroy() {
-    if (window) {
-        SDL_DestroyWindow(window);
+    if (sdlWindowHandle) {
+        SDL_DestroyWindow(sdlWindowHandle);
+        sdlWindowHandle = nullptr;
     }
 }
 
 void SDLWindow::Show() {
-    SDL_ShowWindow(window);
+    SDL_ShowWindow(sdlWindowHandle);
 }
 
