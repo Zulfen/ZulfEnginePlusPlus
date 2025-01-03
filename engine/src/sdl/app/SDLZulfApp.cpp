@@ -4,7 +4,7 @@ std::unique_ptr<WindowImpl> SDLZulfApp::CreateWindowImpl(int width, int height, 
     return std::make_unique<SDLWindow>(width, height, title);
 }
 
-SDLZulfApp::~SDLZulfApp() {
+SDLZulfApp::~SDLZulfApp()  {
     if (window) {
         window->Destroy();
     }

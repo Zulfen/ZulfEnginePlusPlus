@@ -1,15 +1,14 @@
 #pragma once
 
 class WindowImpl {
-
 public:
+	virtual ~WindowImpl() = default; // Provide an inline implementation
 
-	virtual ~WindowImpl(); // Pure virtual destructor
-
-	WindowImpl(int width, int height, const char* title);
+	WindowImpl(int width, int height, const char* title)
+		: width(width), height(height), title(title) {}
 
 	virtual void Show() = 0;
-	virtual void Destroy() = 0;
+	virtual void Destroy() {}
 
 protected:
 	int width;

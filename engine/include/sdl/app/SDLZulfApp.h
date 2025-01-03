@@ -23,6 +23,7 @@ public:
     }
 
     ~SDLZulfApp() override;
+
 protected:
     std::unique_ptr<WindowImpl> CreateWindowImpl(int width, int height, const char *title) override;
 };
