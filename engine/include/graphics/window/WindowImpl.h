@@ -3,6 +3,7 @@
 class WindowImpl {
 
 public:
+
 	virtual ~WindowImpl(); // Pure virtual destructor
 
 	WindowImpl(int width, int height, const char* title);

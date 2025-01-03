@@ -3,12 +3,9 @@
 
 WindowImpl::WindowImpl(int width, int height, const char* title)
     : width(width), height(height), title(title) {
-    // Constructor logic to initialize the width, height, and title
 }
 
-WindowImpl::~WindowImpl() {
-    // Destructor logic (if needed)
-}
+WindowImpl::~WindowImpl() = default;
 
 void WindowImpl::Destroy() {
 
