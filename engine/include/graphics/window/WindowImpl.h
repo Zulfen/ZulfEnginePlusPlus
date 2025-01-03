@@ -9,12 +9,11 @@ public:
 		int width;
 	};
 
-
 	WindowImpl(int width, int height, const char* title);
 	virtual ~WindowImpl();
 
 	virtual WindowRef CreateWindow() = 0;
-	virtual void DestroyWindow();
+	virtual void DestroyWindow() = 0;
 
 protected:
 	int width;

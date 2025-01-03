@@ -1,4 +1,4 @@
-#include "WindowImpl.h"
+#include "graphics/window/WindowImpl.h"
 
 
 WindowImpl::WindowImpl(int w, int h, const char* t) {
@@ -9,7 +9,7 @@ WindowImpl::WindowImpl(int w, int h, const char* t) {
 
 WindowImpl::~WindowImpl()
 {
-	DestroyWindow();
+	WindowImpl::DestroyWindow();
 }
 
 
