@@ -1,17 +1,22 @@
 #pragma once
 
-class WindowImpl {
-public:
-	virtual ~WindowImpl() = default; // Provide an inline implementation
+namespace ZulfEngine {
 
-	WindowImpl(int width, int height, const char* title)
-		: width(width), height(height), title(title) {}
+	class WindowImpl {
+	public:
+		virtual ~WindowImpl() = default;
 
-	virtual void Show() = 0;
-	virtual void Destroy() {}
+		WindowImpl(int width, int height, const char* title)
+			: width(width), height(height), title(title) {}
 
-protected:
-	int width;
-	int height;
-	const char* title;
-};
+		virtual void Show() = 0;
+		virtual void Destroy() = 0;
+
+	protected:
+		int width;
+		int height;
+		const char* title;
+	};
+
+
+}

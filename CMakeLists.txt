@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.10)
 project(ZulfEnginePlusPlus)
 
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 # Set the directory where CMake should search for SDL2
 set(SDL2_DIR "${CMAKE_SOURCE_DIR}/vendor/SDL2/SDL2-2.30.2/cmake")
 
