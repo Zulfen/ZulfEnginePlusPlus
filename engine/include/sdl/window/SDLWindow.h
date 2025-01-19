@@ -11,6 +11,7 @@ namespace ZulfEngine {
 
 		void Destroy() override;
 		void Show() override;
+		void Hide() override;
 
 	protected:
 		std::unique_ptr<SDL_Window, decltype(&SDL_DestroyWindow)> sdlWindowHandle;

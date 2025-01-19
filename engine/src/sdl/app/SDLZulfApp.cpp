@@ -4,6 +4,8 @@
 #include <SDL.h>
 #include <SDL_events.h>
 #include <event/ZulfApplicationEvent.h>
+#include <event/ZulfKeyboardEvent.h>
+#include "sdl/event/SDLKey.h"
 #include "sdl/window/SDLWindow.h"
 
 
@@ -27,6 +29,11 @@ namespace ZulfEngine {
                         eventDispatcher->DispatchEvent(windowCloseEvent);
                         running = false;
                         break;
+                    }
+                    case SDL_KEYDOWN: {
+                        const ZulfKey key = TranslateSDLKey(sdlEvent.key.keysym.sym);
+                        KeyDownEvent keyDownEvent(key);
+                        eventDispatcher->DispatchEvent(keyDownEvent);
                     }
                     default:
                         break;

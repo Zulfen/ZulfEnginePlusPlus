@@ -11,6 +11,7 @@ namespace ZulfEngine {
 
 		virtual void Show() = 0;
 		virtual void Destroy() = 0;
+		virtual void Hide() = 0;
 
 	protected:
 		int width;

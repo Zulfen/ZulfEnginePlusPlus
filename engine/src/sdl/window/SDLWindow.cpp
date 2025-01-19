@@ -23,5 +23,11 @@ namespace ZulfEngine {
             SDL_ShowWindow(sdlWindowHandle.get());
         }
     }
+
+    void SDLWindow::Hide() {
+        if (sdlWindowHandle) {
+            SDL_HideWindow(sdlWindowHandle.get());
+        }
+    }
 }
 
