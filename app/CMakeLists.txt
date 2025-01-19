@@ -9,6 +9,7 @@ add_executable(MyApplication src/main.cpp)
 
 # Link ZulfEngine and SDL2 to the application
 target_link_libraries(MyApplication PRIVATE ZulfEngine SDL2::SDL2)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static") # maybe not making everything static is a good idea but oh well, works
 
 # Add include directories for the application
 target_include_directories(MyApplication PRIVATE
