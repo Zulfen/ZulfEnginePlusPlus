@@ -19,4 +19,10 @@ target_include_directories(MyApplication PRIVATE
         ${CMAKE_SOURCE_DIR}/app/include
 )
 
-message(STATUS "Found SDL2: ${SDL2_DIR}")
+if (WIN32)
+    add_custom_command(TARGET MyApplication POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            $<TARGET_FILE:SDL2::SDL2> # Path to the SDL2 DLL
+            $<TARGET_FILE_DIR:MyApplication> # Destination folder (executable directory)
+    )
+endif()

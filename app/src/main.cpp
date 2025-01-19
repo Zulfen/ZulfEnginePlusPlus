@@ -4,6 +4,7 @@
 using namespace ZulfEngine;
 
 int main() {
+
     auto zulfApp = ZulfApp::createApplication();
 
     zulfApp->CreateWindow(800, 600, "ZulfEngine");
@@ -17,5 +18,7 @@ int main() {
     zulfApp->Update();
 
 }
+
+
 
 
