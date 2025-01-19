@@ -11,8 +11,9 @@ namespace ZulfEngine {
         return window ? window.get() : nullptr;
     }
 
-    void ZulfApp::CreateWindow(int width, int height, const char *title) {
+    WindowImpl& ZulfApp::CreateWindow(int width, int height, const char *title) {
         window = CreateWindowImpl(width, height, title);
+        return *window;
     }
 
     EventDispatcher& ZulfApp::GetEventDispatcher() const {

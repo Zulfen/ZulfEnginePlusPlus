@@ -8,7 +8,7 @@
 namespace ZulfEngine {
 
     SDLWindow::SDLWindow(int width, int height, const char* title): WindowImpl(width, height, title),
-      sdlWindowHandle(SDL_CreateWindow(title, 100, 100, width, height, SDL_WINDOW_OPENGL), SDL_DestroyWindow) {
+      sdlWindowHandle(SDL_CreateWindow(title, 100, 100, width, height, SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE) , SDL_DestroyWindow) {
         if (!sdlWindowHandle) {
             throw std::runtime_error("Failed to create SDL window");
         }

@@ -18,7 +18,7 @@ namespace ZulfEngine {
 
         // no need to transfer ownership as we are temporarily
         [[nodiscard]] WindowImpl* GetWindow() const;
-        void CreateWindow(int width, int height, const char* title);
+        WindowImpl& CreateWindow(int width, int height, const char* title);
 
         [[nodiscard]] EventDispatcher& GetEventDispatcher() const;
 
