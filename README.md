@@ -5,4 +5,4 @@ Be warned, the only thing the engine can do right now is display a window...
 
 ## TODO:
 - Get CMake to build properly on any machine, and not just CLion. 
-- Get a basic event system done
+- Get OpenGL working
